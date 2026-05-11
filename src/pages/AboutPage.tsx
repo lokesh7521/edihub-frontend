@@ -1,4 +1,4 @@
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -29,7 +29,7 @@ const item = {
 
 export function AboutPage() {
   const heroRef = useRef(null);
-  const heroInView = useInView(heroRef, { once: true, margin: "-80px" });
+
 
   const heroImagesRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -39,10 +39,10 @@ export function AboutPage() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
   const storyRef = useRef(null);
-  const storyInView = useInView(storyRef, { once: true, margin: "-80px" });
+
 
   const teamRef = useRef(null);
-  const teamInView = useInView(teamRef, { once: true, margin: "-80px" });
+
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import pexels1 from "@/assets/projects/pexels-1.jpg";
 import pexels2 from "@/assets/projects/pexels-2.jpg";
