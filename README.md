@@ -57,3 +57,5 @@ src/
 - **Hero**: optional background image/video can be added; see `Hero.tsx` comments.
 
 Replace placeholders with assets from the original site or your own media.
+
+<!-- Deployment trigger: 05/11/2026 19:54:32 -->
