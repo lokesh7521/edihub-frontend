@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import teamImage from "@/assets/team.jpg";
 import statsImage from "@/assets/stats.jpg";
-import logoIcon from "@/assets/e.webp";
+
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
