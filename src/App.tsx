@@ -12,6 +12,9 @@ import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 import { AboutPage } from "@/pages/AboutPage";
+import { ServicesPage } from "@/pages/ServicesPage";
+import { TeamDetailPage } from "@/pages/TeamDetailPage";
+import { ProjectDetailPage } from "@/pages/ProjectDetailPage";
 import { AdminLogin } from "@/pages/AdminLogin";
 import { AdminDashboard } from "@/pages/AdminDashboard";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -39,94 +42,95 @@ function App() {
         zIndex={2000}
         style={{ pointerEvents: "none" }}
       />
-    <div className="relative min-h-screen">
-      {!isAdminPage && <Navbar />}
-      <main>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <Vision />
-                <ClientMarquee />
-                <Services />
-                <Process />
-                <Projects />
-                <Pricing />
-                <Testimonials />
-                <Faq />
-                <CtaSection />
-                <Contact />
-                <Footer />
-              </>
-            }
-          />
+      <div className="relative min-h-screen">
+        {!isAdminPage && <Navbar />}
+        <main>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <Vision />
+                  <ClientMarquee />
+                  <Services />
+                  <Process />
+                  <Projects />
+                  <Pricing />
+                  <Testimonials />
+                  <Faq />
+                  <CtaSection />
+                  <Contact />
+                  <Footer />
+                </>
+              }
+            />
 
-          <Route
-            path="/about"
-            element={<AboutPage />}
-          />
+            <Route
+              path="/about"
+              element={<AboutPage />}
+            />
+            <Route
+              path="/team/:id"
+              element={<TeamDetailPage />}
+            />
 
-          <Route
-            path="/services"
-            element={
-              <>
-                <Services />
-                <Pricing />
-                <Faq />
-                <Contact />
-                <Footer />
-              </>
-            }
-          />
+            <Route
+              path="/services"
+              element={<ServicesPage />}
+            />
 
-          <Route
-            path="/projects"
-            element={
-              <>
-                <Projects />
-                <Testimonials />
-                <CtaSection />
-                <Contact />
-                <Footer />
-              </>
-            }
-          />
+            <Route
+              path="/projects"
+              element={
+                <>
+                  <Projects />
+                  <Testimonials />
+                  <CtaSection />
+                  <Contact />
+                  <Footer />
+                </>
+              }
+            />
 
-          <Route
-            path="/contact"
-            element={
-              <>
-                <CtaSection />
-                <Contact />
-                <Footer />
-              </>
-            }
-          />
+            <Route
+              path="/projects/:slug"
+              element={<ProjectDetailPage />}
+            />
 
-          <Route
-            path="/career"
-            element={
-              <>
-                <CtaSection />
-                <Contact />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/admin"
-            element={<AdminDashboard />}
-          />
+            <Route
+              path="/contact"
+              element={
+                <>
+                  <CtaSection />
+                  <Contact />
+                  <Footer />
+                </>
+              }
+            />
 
-          <Route
-            path="/admin-login"
-            element={<AdminLogin />}
-          />
-        </Routes>
-      </main>
-    </div>
+            <Route
+              path="/career"
+              element={
+                <>
+                  <CtaSection />
+                  <Contact />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/admin"
+              element={<AdminDashboard />}
+            />
+
+            <Route
+              path="/admin-login"
+              element={<AdminLogin />}
+            />
+          </Routes>
+        </main>
+      </div>
     </>
   );
 }
