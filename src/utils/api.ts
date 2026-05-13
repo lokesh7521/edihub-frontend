@@ -13,10 +13,9 @@ export const getApiUrl = () => {
     url = "http://localhost:5001/api";
   } else {
     // 2. Production (Railway)
-    // We are FORCING the shorter URL because the "production" one has DNS issues
-    url = "https://edihub-backend.up.railway.app/api";
+    // We use the fresh domain you just generated
+    url = import.meta.env.VITE_API_URL || "https://edihub-backend-production.up.railway.app/api";
   }
-
 
   // Ensure consistent formatting
   url = url.replace(/\/$/, "");
@@ -26,5 +25,6 @@ export const getApiUrl = () => {
   console.log("🔗 Connecting to API at:", url);
   return url;
 };
+
 
 
