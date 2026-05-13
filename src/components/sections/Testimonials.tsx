@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { getApiUrl } from "@/utils/api";
 
 import bgCanvasStudio from "@/assets/pexels-canvastudio-3153198.jpg";
 import bgMikhailNilov from "@/assets/pexels-mikhail-nilov-6930549.jpg";
@@ -18,7 +19,8 @@ export function Testimonials() {
   const [testimonials, setTestimonials] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/testimonials`)
+    const apiUrl = getApiUrl();
+    fetch(`${apiUrl}/testimonials`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Testimonials data fetched:", data);
@@ -30,6 +32,7 @@ export function Testimonials() {
   const { scrollYProgress } = useScroll({
     target: bgRef,
     offset: ["start end", "end start"],
+    layoutEffect: false,
   });
   const parallaxY = useTransform(scrollYProgress, [0, 0.7], [0, -120]);
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiLogOut, FiPieChart, FiBox, FiLayers, FiMessageSquare, FiUsers, FiSettings } from 'react-icons/fi';
+import { getApiUrl } from '../utils/api';
 
 export function AdminDashboard() {
   const [admin, setAdmin] = useState<any>(null);
@@ -26,7 +27,7 @@ export function AdminDashboard() {
     // Fetch stats
     const fetchStats = async () => {
       try {
-        const apiUrl = (import.meta.env.VITE_API_URL || 'http://localhost:5001/api').replace(/\/$/, '');
+        const apiUrl = getApiUrl();
         const [projectsRes, servicesRes, testimonialsRes] = await Promise.all([
           fetch(`${apiUrl}/projects`),
           fetch(`${apiUrl}/services`),

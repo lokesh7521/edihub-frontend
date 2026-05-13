@@ -8,6 +8,7 @@ import pexels4 from "@/assets/projects/pexels-4.jpg";
 import pexels5 from "@/assets/projects/pexels-5.jpg";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { getApiUrl } from "@/utils/api";
 
 type Project = {
   title: string;
@@ -59,6 +60,7 @@ function ProjectCard({
   const { scrollYProgress } = useScroll({
     target: mediaRef,
     offset: ["start end", "end start"],
+    layoutEffect: false,
   });
 
   const y = useTransform(scrollYProgress, [0, 0.6], [0, -100]);
@@ -126,7 +128,8 @@ export function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/projects`)
+    const apiUrl = getApiUrl();
+    fetch(`${apiUrl}/projects`)
       .then((res) => res.json())
       .then((data) => setProjects(data))
       .catch((err) => console.error("Error fetching projects:", err));

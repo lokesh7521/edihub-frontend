@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { getApiUrl } from '../utils/api';
 
 export function AdminLogin() {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ export function AdminLogin() {
     setError('');
 
     try {
-      const apiUrl = (import.meta.env.VITE_API_URL || 'http://localhost:5001/api').replace(/\/$/, '');
+      const apiUrl = getApiUrl();
       const response = await fetch(`${apiUrl}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -1,3 +1,4 @@
 export const getApiUrl = () => {
-  return import.meta.env.VITE_API_URL || '';
+  const url = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+  return url.replace(/\/$/, '');
 };

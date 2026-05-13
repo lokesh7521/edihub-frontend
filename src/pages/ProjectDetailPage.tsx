@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { getApiUrl } from "@/utils/api";
 import pexels1 from "@/assets/projects/pexels-1.jpg";
 import pexels2 from "@/assets/projects/pexels-2.jpg";
 import pexels3 from "@/assets/projects/pexels-3.jpg";
@@ -38,7 +39,8 @@ export function ProjectDetailPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/projects`)
+    const apiUrl = getApiUrl();
+    fetch(`${apiUrl}/projects`)
       .then((res) => res.json())
       .then((data: Project[]) => {
         setProjects(data);

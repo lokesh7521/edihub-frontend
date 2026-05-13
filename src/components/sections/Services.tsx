@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { getApiUrl } from "@/utils/api";
 
 const list = {
   hidden: {},
@@ -27,7 +28,8 @@ export function Services() {
   const [services, setServices] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/services`)
+    const apiUrl = getApiUrl();
+    fetch(`${apiUrl}/services`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Services data fetched:", data);
