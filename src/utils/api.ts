@@ -5,22 +5,30 @@
 export const getApiUrl = () => {
   let url = "";
 
-  // 1. If we are running locally (localhost), use the local backend
+  // 1. Localhost Check
   if (
     window.location.hostname === "localhost" || 
     window.location.hostname === "127.0.0.1"
   ) {
     url = "http://localhost:5001/api";
   } else {
-    // 2. Otherwise, use the production URL (Railway)
-    // We fall back to the environment variable set in Vercel
+    // 2. Production (Railway)
+    // Priority: 1. Environment Variable, 2. Short Domain, 3. Production Domain
     url = import.meta.env.VITE_API_URL || "https://edihub-backend.up.railway.app/api";
+    
+    // If we know the production domain is failing, we use the one that usually works
+    if (!import.meta.env.VITE_API_URL) {
+       url = "https://edihub-backend.up.railway.app/api";
+    }
   }
 
-  // Ensure the URL doesn't have a trailing slash before /api if the user added it in Vercel
+  // Ensure consistent formatting
   url = url.replace(/\/$/, "");
+  if (url.endsWith("/api/api")) url = url.replace(/\/api\/api$/, "/api");
+  if (!url.endsWith("/api")) url += "/api";
 
-  console.log("🔗 Using API URL:", url);
+  console.log("🔗 Connecting to API at:", url);
   return url;
 };
+
 
