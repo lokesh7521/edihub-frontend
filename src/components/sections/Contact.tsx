@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { getApiUrl } from "@/utils/api";
 
 const countryCodes = [
   { code: "+91", label: "IN (+91)" },
@@ -34,7 +35,8 @@ export function Contact() {
         phone: formData.phone ? `${formData.countryCode} ${formData.phone}` : "",
       };
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+      const apiUrl = getApiUrl();
+      const response = await fetch(`${apiUrl}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

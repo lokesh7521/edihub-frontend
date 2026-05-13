@@ -7,6 +7,7 @@ import { Contact } from "@/components/sections/Contact";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Faq } from "@/components/sections/Faq";
 import { Process } from "@/components/sections/Process";
+import { getApiUrl } from "@/utils/api";
 
 const fallbackServices = [
   {
@@ -48,7 +49,7 @@ export function ServicesPage() {
   const [services, setServices] = useState<any[]>([]);
 
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+    const apiUrl = getApiUrl();
     fetch(`${apiUrl}/services`)
       .then((res) => res.json())
       .then((data) => setServices(data.length > 0 ? data : fallbackServices))
