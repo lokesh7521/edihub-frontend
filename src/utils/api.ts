@@ -13,14 +13,10 @@ export const getApiUrl = () => {
     url = "http://localhost:5001/api";
   } else {
     // 2. Production (Railway)
-    // Priority: 1. Environment Variable, 2. Short Domain, 3. Production Domain
-    url = import.meta.env.VITE_API_URL || "https://edihub-backend.up.railway.app/api";
-    
-    // If we know the production domain is failing, we use the one that usually works
-    if (!import.meta.env.VITE_API_URL) {
-       url = "https://edihub-backend.up.railway.app/api";
-    }
+    // We are FORCING the shorter URL because the "production" one has DNS issues
+    url = "https://edihub-backend.up.railway.app/api";
   }
+
 
   // Ensure consistent formatting
   url = url.replace(/\/$/, "");
