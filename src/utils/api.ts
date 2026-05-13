@@ -14,7 +14,7 @@ export const getApiUrl = () => {
   } else {
     // 2. Otherwise, use the production URL (Railway)
     // We fall back to the environment variable set in Vercel
-    url = import.meta.env.VITE_API_URL || "https://edihub-backend-production.up.railway.app/api";
+    url = import.meta.env.VITE_API_URL || "https://edihub-backend.up.railway.app/api";
   }
 
   // Ensure the URL doesn't have a trailing slash before /api if the user added it in Vercel
