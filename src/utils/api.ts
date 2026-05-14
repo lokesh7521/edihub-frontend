@@ -12,7 +12,7 @@ export const getApiUrl = () => {
 
   // 2. For EVERYTHING else (Phone, Mobile Data, Production Vercel link, etc.)
   // We use your public Railway URL
-  return "https://edihub-backend-production.up.railway.app/api";
+  return "https://edihub-api-new-v1.up.railway.app/api";
 };
 
 
