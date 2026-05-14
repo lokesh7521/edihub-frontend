@@ -35,6 +35,7 @@ export function AboutPage() {
   const { scrollYProgress } = useScroll({
     target: heroImagesRef,
     offset: ["start end", "end start"],
+    layoutEffect: false,
   });
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
@@ -63,7 +64,7 @@ export function AboutPage() {
 
             <div
               ref={heroImagesRef}
-              className="mt-16 grid gap-8 lg:mt-24 lg:grid-cols-12 lg:gap-14"
+              className="relative mt-16 grid gap-8 lg:mt-24 lg:grid-cols-12 lg:gap-14"
             >
               {/* Left image card */}
               <motion.div variants={item} className="lg:col-span-6">

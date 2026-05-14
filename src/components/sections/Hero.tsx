@@ -10,6 +10,7 @@ export function Hero() {
   const { scrollYProgress } = useScroll({
     target: heroImageRef,
     offset: ["start end", "end start"],
+    layoutEffect: false,
   });
   const y = useTransform(scrollYProgress, [0, 0.6], [0, -200]);
 

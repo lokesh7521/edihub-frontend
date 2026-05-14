@@ -30,6 +30,7 @@ export function TeamImageStats() {
   const { scrollYProgress } = useScroll({
     target: mediaRef,
     offset: ["start end", "end start"],
+    layoutEffect: false,
   });
   const y = useTransform(scrollYProgress, [0, 0.6], [0, -130]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.4, 1, 1]);

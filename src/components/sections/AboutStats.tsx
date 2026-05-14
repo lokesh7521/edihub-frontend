@@ -31,6 +31,7 @@ export function AboutStats() {
   const { scrollYProgress } = useScroll({
     target: mediaRef,
     offset: ["start end", "end start"],
+    layoutEffect: false,
   });
   const y = useTransform(scrollYProgress, [0, 0.6], [0, -90]);
 
