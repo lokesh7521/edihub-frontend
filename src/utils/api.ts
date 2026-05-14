@@ -24,7 +24,7 @@ export const getApiUrl = () => {
 
   // 3. For ANY other network (Mobile Data, Production, etc.)
   // We use the public Railway URL
-  return "https://edihub-backend-production.up.railway.app/api";
+  return "https://edihub-backend-prod.up.railway.app/api";
 };
 
 
