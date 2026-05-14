@@ -18,7 +18,7 @@ export const getApiUrl = () => {
     // you MUST use your computer's IP address here instead of 'localhost'.
     // However, for the browser running on the same PC, 'localhost' is fine.
     // To make it universal, we use the current hostname.
-    return `http://${hostname}:5001/api`;
+    return `http://${hostname}:5000/api`;
   }
 
   // 2. Production URL (Railway)
