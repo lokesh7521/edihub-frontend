@@ -22,7 +22,7 @@ export const getApiUrl = () => {
   }
 
   // 2. Production URL (Railway)
-  return "https://edihub-api-new-v1.up.railway.app/api";
+  return import.meta.env.VITE_API_URL || "https://edihub-backend-production.up.railway.app/api";
 };
 
 
