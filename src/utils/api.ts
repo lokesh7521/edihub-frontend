@@ -3,27 +3,28 @@
  * Automatically switches between Localhost and Production.
  */
 export const getApiUrl = () => {
-  let url = "";
+  const hostname = window.location.hostname;
+  
+  // 1. Check if we are running locally on this machine
+  const isLocal = 
+    hostname === "localhost" || 
+    hostname === "127.0.0.1";
 
-  // 1. Localhost Check
-  if (
-    window.location.hostname === "localhost" || 
-    window.location.hostname === "127.0.0.1"
-  ) {
-    url = "http://localhost:5001/api";
-  } else {
-    // 2. Production (Railway)
-    // We use the fresh domain you just generated
-    url = import.meta.env.VITE_API_URL || "https://edihub-backend-production.up.railway.app/api";
+  // 2. Check if we are on a local network IP (e.g., 192.168.x.x)
+  const isLocalNetwork = /^(192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.)/.test(hostname);
+
+  if (isLocal) {
+    return "http://localhost:5001/api";
   }
 
-  // Ensure consistent formatting
-  url = url.replace(/\/$/, "");
-  if (url.endsWith("/api/api")) url = url.replace(/\/api\/api$/, "/api");
-  if (!url.endsWith("/api")) url += "/api";
+  if (isLocalNetwork) {
+    // If testing on phone via local Wi-Fi, try to connect to the computer's IP
+    return `http://${hostname}:5001/api`;
+  }
 
-  console.log("🔗 Connecting to API at:", url);
-  return url;
+  // 3. For ANY other network (Mobile Data, Production, etc.)
+  // We use the public Railway URL
+  return "https://edihub-backend-production.up.railway.app/api";
 };
 
 
