@@ -103,7 +103,7 @@ export function Contact() {
                     Address
                   </h4>
                   <a
-                    href="https://maps.google.com/maps?q=EDIHUB%20Vaishali%20Estate,%20Jaipur,%20Rajasthan"
+                    href="https://maps.google.com/maps?q=26.90553351017583,75.70276965802596"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 block text-[18px] font-medium leading-relaxed text-[#111827] hover:text-[#0066FF] transition-colors"
@@ -113,13 +113,13 @@ export function Contact() {
                   </a>
                 </div>
 
-                 <div className="group relative overflow-hidden rounded-[2.5rem] border border-zinc-200 bg-zinc-950 shadow-2xl transition-all duration-500 hover:border-[#0066FF]/40">
+                 <div className="group relative overflow-hidden rounded-[2.5rem] border border-zinc-200 bg-white shadow-2xl transition-all duration-500 hover:border-[#0066FF]/40">
                   {/* Grid Overlay for high-tech architectural vibe */}
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-10" />
+                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000004_1px,transparent_1px),linear-gradient(to_bottom,#00000004_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-10" />
 
                   {/* High-tech Glowing Accent Ambient Light */}
-                  <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-[#0066FF]/15 blur-[100px] transition-all duration-700 group-hover:bg-[#0066FF]/25 pointer-events-none" />
-                  <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-[#0066FF]/5 blur-[100px] transition-all duration-700 group-hover:bg-[#0066FF]/15 pointer-events-none" />
+                  <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-[#0066FF]/8 blur-[100px] transition-all duration-700 group-hover:bg-[#0066FF]/15 pointer-events-none" />
+                  <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-[#0066FF]/3 blur-[100px] transition-all duration-700 group-hover:bg-[#0066FF]/8 pointer-events-none" />
 
                   {/* HUD Corner Brackets */}
                   <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-[#0066FF]/30 pointer-events-none z-15 transition-all duration-500 group-hover:border-[#0066FF]/80 group-hover:scale-105" />
@@ -134,9 +134,9 @@ export function Contact() {
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                     <div className="relative flex h-24 w-24 items-center justify-center">
                       {/* Ripple Rings */}
-                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#0066FF]/10 animate-[ping_2.5s_infinite] opacity-75" />
-                      <span className="absolute inline-flex h-16 w-16 rounded-full bg-[#0066FF]/15 animate-[ping_1.8s_infinite] opacity-60" />
-                      <span className="absolute inline-flex h-8 w-8 rounded-full bg-[#0066FF]/20 animate-pulse" />
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#0066FF]/5 animate-[ping_2.5s_infinite] opacity-75" />
+                      <span className="absolute inline-flex h-16 w-16 rounded-full bg-[#0066FF]/8 animate-[ping_1.8s_infinite] opacity-60" />
+                      <span className="absolute inline-flex h-8 w-8 rounded-full bg-[#0066FF]/10 animate-pulse" />
                       
                       {/* Target Crosshair Marks */}
                       <div className="absolute h-8 w-[1.5px] bg-[#0066FF]/30 group-hover:bg-[#0066FF]/70 transition-colors duration-300" />
@@ -150,7 +150,7 @@ export function Contact() {
                   {/* Floating Glassmorphic Top Controls Panel */}
                   <div className="absolute top-5 left-5 right-5 z-20 flex items-center justify-between pointer-events-none">
                     <a
-                      href="https://maps.google.com/maps?q=EDIHUB%20Vaishali%20Estate,%20Jaipur,%20Rajasthan"
+                      href="https://maps.google.com/maps?q=26.90553351017583,75.70276965802596"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 rounded-full bg-white/90 px-4.5 py-2.5 text-[12px] font-bold text-zinc-950 backdrop-blur-md border border-white/60 shadow-lg pointer-events-auto hover:text-[#0066FF] transition-colors"
@@ -163,12 +163,12 @@ export function Contact() {
                     </a>
 
                     <a
-                      href="https://maps.google.com/maps?q=26.9038,75.7423"
+                      href="https://maps.google.com/maps?q=26.90553351017583,75.70276965802596"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full bg-white/90 px-4 py-2.5 text-[11px] font-mono font-bold tracking-widest text-[#4B5563] backdrop-blur-md border border-white/60 shadow-lg pointer-events-auto hover:text-[#0066FF] transition-colors"
                     >
-                      26.9038° N, 75.7423° E
+                      26.9055° N, 75.7028° E
                     </a>
                   </div>
 
@@ -180,7 +180,7 @@ export function Contact() {
                     </div>
 
                     <a
-                      href="https://maps.google.com/maps?q=EDIHUB%20Vaishali%20Estate,%20Jaipur,%20Rajasthan"
+                      href="https://maps.google.com/maps?q=26.90553351017583,75.70276965802596"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group/btn flex items-center gap-2 rounded-full bg-[#0066FF] hover:bg-black px-5 py-2.5 text-[12px] font-bold text-white transition-all duration-300 shadow-lg shadow-[#0066FF]/20 pointer-events-auto"
@@ -193,7 +193,7 @@ export function Contact() {
                   </div>
 
                   <iframe
-                    src="https://maps.google.com/maps?q=EDIHUB%20Vaishali%20Estate,%20Jaipur,%20Rajasthan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=26.90553351017583,75.70276965802596&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="380"
                     style={{ border: 0 }}
@@ -201,7 +201,7 @@ export function Contact() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Google Map Location"
-                    className="opacity-70 transition-all duration-700 ease-out invert-[0.9] hue-rotate-[190deg] saturate-[0.3] brightness-[0.95] contrast-[1.1] group-hover:invert-[0.9] group-hover:hue-rotate-[205deg] group-hover:saturate-[0.8] group-hover:brightness-[0.9] group-hover:contrast-[1.25] group-hover:opacity-95"
+                    className="opacity-80 transition-all duration-700 ease-out grayscale-[0.9] brightness-[1.04] contrast-[1.02] group-hover:grayscale-[0.2] group-hover:brightness-[1.0] group-hover:contrast-[1.05] group-hover:opacity-100"
                   />
                 </div>
               </div>

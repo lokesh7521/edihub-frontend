@@ -132,7 +132,7 @@ export function ProjectsPage() {
               viewport={{ once: true, margin: "-80px" }}
               className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:gap-x-12 lg:gap-y-24"
             >
-              {projects.map((project, i) => {
+              {projects.map((project) => {
                 const projectImage = customImageMap[project.slug] || project.image;
                 return (
                   <motion.div
