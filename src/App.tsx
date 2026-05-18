@@ -15,6 +15,7 @@ import { AboutPage } from "@/pages/AboutPage";
 import { ServicesPage } from "@/pages/ServicesPage";
 import { TeamDetailPage } from "@/pages/TeamDetailPage";
 import { ProjectDetailPage } from "@/pages/ProjectDetailPage";
+import { ProjectsPage } from "@/pages/ProjectsPage";
 import { AdminLogin } from "@/pages/AdminLogin";
 import { AdminDashboard } from "@/pages/AdminDashboard";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -60,7 +61,6 @@ function App() {
                   <Testimonials />
                   <Faq />
                   <CtaSection />
-                  <Contact />
                   <Footer />
                 </>
               }
@@ -82,15 +82,7 @@ function App() {
 
             <Route
               path="/projects"
-              element={
-                <>
-                  <Projects />
-                  <Testimonials />
-                  <CtaSection />
-                  <Contact />
-                  <Footer />
-                </>
-              }
+              element={<ProjectsPage />}
             />
 
             <Route
@@ -102,7 +94,6 @@ function App() {
               path="/contact"
               element={
                 <>
-                  <CtaSection />
                   <Contact />
                   <Footer />
                 </>
@@ -114,7 +105,6 @@ function App() {
               element={
                 <>
                   <CtaSection />
-                  <Contact />
                   <Footer />
                 </>
               }

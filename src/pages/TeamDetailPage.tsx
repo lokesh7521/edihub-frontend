@@ -4,7 +4,6 @@ import { team } from "@/data/team";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Footer } from "@/components/layout/Footer";
-import { Contact } from "@/components/sections/Contact";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { useEffect } from "react";
 
@@ -176,7 +175,6 @@ export function TeamDetailPage() {
       </Section>
 
       <CtaSection />
-      <Contact />
       <Footer />
     </div>
   );

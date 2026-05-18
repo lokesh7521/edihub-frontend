@@ -7,7 +7,6 @@ import teamImage from "@/assets/team.jpg";
 import statsImage from "@/assets/stats.jpg";
 
 import { CtaSection } from "@/components/sections/CtaSection";
-import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 import { team } from "@/data/team";
 
@@ -218,7 +217,6 @@ export function AboutPage() {
       </Section>
 
       <CtaSection />
-      <Contact />
       <Footer />
     </>
   );

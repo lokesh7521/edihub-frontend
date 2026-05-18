@@ -12,12 +12,28 @@ import pexels3 from "@/assets/projects/pexels-3.jpg";
 import pexels4 from "@/assets/projects/pexels-4.jpg";
 import pexels5 from "@/assets/projects/pexels-5.jpg";
 
+import arrowsImg from "@/assets/projects/arrows.png";
+import chantalleImg from "@/assets/projects/chantalle.png";
+import papyrusImg from "@/assets/projects/papyrus.png";
+import londonMuseumImg from "@/assets/projects/london-museum.png";
+import bullseyeImg from "@/assets/projects/bullseye.png";
+import interferenceImg from "@/assets/projects/interference.png";
+
 const imageMap: Record<string, string> = {
   "pexels-1.jpg": pexels1,
   "pexels-2.jpg": pexels2,
   "pexels-3.jpg": pexels3,
   "pexels-4.jpg": pexels4,
   "pexels-5.jpg": pexels5,
+};
+
+const customImageMap: Record<string, string> = {
+  "arrows": arrowsImg,
+  "chantalle": chantalleImg,
+  "papyrus": papyrusImg,
+  "london-museum": londonMuseumImg,
+  "bullseye": bullseyeImg,
+  "interference": interferenceImg,
 };
 
 type Project = {
@@ -103,7 +119,7 @@ export function ProjectDetailPage() {
               className="relative aspect-[16/9] w-full overflow-hidden sm:rounded-[2rem]"
             >
               <img
-                src={imageMap[project.image] || project.image}
+                src={customImageMap[project.slug] || imageMap[project.image] || project.image}
                 alt={project.title}
                 className="h-full w-full object-cover"
               />
@@ -192,7 +208,7 @@ export function ProjectDetailPage() {
                   >
                     <div className="relative mx-auto aspect-[21/9] max-w-5xl overflow-hidden rounded-[2rem]">
                       <img
-                        src={imageMap[nextProject.image] || nextProject.image}
+                        src={customImageMap[nextProject.slug] || imageMap[nextProject.image] || nextProject.image}
                         alt={nextProject.title}
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />

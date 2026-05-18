@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import videoBg from "@/assets/download.mp4";
+import { Link } from "react-router-dom";
 
 const list = {
   hidden: {},
@@ -67,13 +68,14 @@ export function CtaSection() {
             Get in touch to explore how we can help your business reach its full potential.
           </motion.p>
           
-          <motion.a
-            variants={item}
-            href="#contact"
-            className="mt-8 inline-flex items-center justify-center rounded-lg bg-white px-12 py-5 text-lg font-semibold tracking-[-0.02em] text-black transition-all hover:bg-white/90 sm:mt-10 sm:px-14 sm:py-5 sm:text-xl md:mt-12 md:px-20 md:py-7 md:text-3xl"
-          >
-            Get Started Today
-          </motion.a>
+          <Link to="/contact">
+            <motion.div
+              variants={item}
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-white px-12 py-5 text-lg font-semibold tracking-[-0.02em] text-black transition-all hover:bg-white/90 sm:mt-10 sm:px-14 sm:py-5 sm:text-xl md:mt-12 md:px-20 md:py-7 md:text-3xl cursor-pointer"
+            >
+              Get Started Today
+            </motion.div>
+          </Link>
         </motion.div>
       </div>
     </section>

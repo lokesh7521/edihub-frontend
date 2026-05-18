@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Footer } from "@/components/layout/Footer";
-import { Contact } from "@/components/sections/Contact";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Faq } from "@/components/sections/Faq";
 import { Process } from "@/components/sections/Process";
@@ -144,9 +143,8 @@ export function ServicesPage() {
       {/* FAQ */}
       <Faq />
 
-      {/* CTA / Contact / Footer */}
+      {/* CTA / Footer */}
       <CtaSection />
-      <Contact />
       <Footer />
     </div>
   );

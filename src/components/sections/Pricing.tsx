@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { Link } from "react-router-dom";
 
 const ACCENT_BLUE = "#0066FF";
 
@@ -190,8 +191,8 @@ export function Pricing() {
               <p className="mt-3 min-h-[56px] text-[12px] leading-[1.6] text-black/55">{plan.description}</p>
 
               <div className="mt-6">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className={`inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-[12px] font-semibold transition-colors ${
                     plan.highlight
                       ? "bg-[#101310] text-white hover:bg-[#0066FF]"
@@ -199,7 +200,7 @@ export function Pricing() {
                   }`}
                 >
                   {plan.cta}
-                </a>
+                </Link>
               </div>
 
               <div className="mt-6 flex flex-col gap-2 text-[12px] text-black/60">
